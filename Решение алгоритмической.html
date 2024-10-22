@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Решение алгоритмической задачи</title>
+</head>
+<body>
+
+    <!-- Уникально содержание страницы -->
+    <h3 align="center">Решение алгоритмической задачи</h3>
+    <p>Введите значение A: <input type="number" id="inputA" value="0"></p>
+    <button id="calculate">Вычислить</button>
+    
+    <p>Результат: <span id="result"></span></p>
+
+    <script>
+        document.getElementById("calculate").addEventListener("click", function() {
+            // Получаем значение A из поля ввода
+            let a = parseFloat(document.getElementById("inputA").value);
+            let x;
+
+            // Логика вычисления x
+            if (a < 10) {
+                x = Math.pow(a, 4); // a ** 4
+            } else if (a > 61) {
+                x = a; // x = a
+            } else {
+                x = a - Math.sin(Math.pow(a, 2)); // x = a - sin(a ** 2)
+            }
+
+            // Обновляем результат на странице
+            document.getElementById("result").textContent = x;
+        });
+    </script>
+
+</body>
+</html>

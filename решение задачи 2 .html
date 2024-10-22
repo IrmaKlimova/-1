@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма для ввода данных</title>
+</head>
+<body>
+    <p>Введите вещественное число A для расчета x:</p>
+    <form id="UserEnter" action="https://example.com/submit" method="POST" target="_blank">
+        <ul>
+            <li>Формулировка задачи: <input name="formulation" value="Вычислить значение x в зависимости от A"></li>
+            <li>A: <input id="a" name="a" type="number" step="any" required></li>
+            <li>Результат решения: <input name="result" value="не определен" readonly></li>
+            <li><button id="calculate" type="button">Вычислить и отправить</button></li>
+        </ul>
+    </form>
+    <p id="output">Результаты вычислений:</p>
+
+    <script src="./js/form.js"></script>
+</body>
+</html>
